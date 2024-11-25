@@ -1,0 +1,123 @@
+* { box-sizing: border-box;}
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+    
+  body {
+         background-image: url("myisland.jpg");
+         background-size: cover;
+         background-repeat:no-repeat;text-align: center;
+         font-size: 20px;
+    }
+    #countm {
+            color: blue;
+    }
+  h1 {
+        color:aqua;
+        font-size: 30px;
+  }
+  #mymonth{
+        padding-left:10px 0;
+        font-size: 10px;
+        resize: none;
+  }
+  .dataFrm{
+          background-color: aquamarine;
+          margin: auto;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 5px;
+          padding-right: 5px;
+          text-align: center;
+  }
+  #increment-btn{
+   color:#bb123b;
+   font-size: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: chartreuse; 
+    border:none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+ }
+ #save-btn {
+  color:#bb123b;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color: rgb(200, 125, 120); 
+   border:none;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-top: 10px;
+ }
+ html {
+        scroll-behavior:smooth;
+ }
+ #save-btn1{
+   color:#85bb12;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color: rgb(200, 125, 120); 
+   border:none;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-top: 10px;
+ }
+ #record-btn{
+         border: none;
+         border: left 1px;
+         color: #85bb12;
+         font-size: 20px;
+         background-color: #bb123b;
+ }
+ 
+ 
+html{
+        scroll-behavior: smooth;
+}
+#wellcomev {
+          color: red;
+          font-size: 40px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-weight: bold;
+          font-style: italic;
+
+}
+#save-mv{
+        color:black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:lighter;
+        text-align: left;
+}
+.show1{
+        color:rgba(51, 10, 126, 0.672);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:lighter;
+        text-align: left; 
+}
+#recordpage{
+        margin-top:180px ;
+        font-size: 20px;
+        color:black;
+}
+
+
+#month2{
+        color:black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:lighter;
+        text-align: left;
+}
+ #month1{
+        color:black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:lighter;
+        text-align: left;  
+ }
