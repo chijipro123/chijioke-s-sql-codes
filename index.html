@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--<link rel="stylesheet" href="nusvisitor.css">-->
-  <link rel="stylesheet" href="musvisitor.css">
-  <script src="visitorsCount.js" defer></script>
-  <title>Museum Visitors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Task</title>
+    <style>
+        .form{
+            margin: 30px 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        input{
+            margin: 5px 0;
+        }
+    
+    </style>
 </head>
 <body>
-    <p id="wellcomev"></p>
-
-   <h1>Recording Number of Visitors:</h1>
-    <h2 id="countm">0</h2>
-    <div class="dataFrm">
-      
-     <label for="Fullname">FullName of Visitor</label>
-     <input type="text" id="fullname" name="array[]" value=""  placeholder="Enter fullname here"/>
-     <label for="Age">Age of Visitor</label>
-     <input type="text" id="age" name="array[]" value="" placeholder="Enter age here">
-     <label for="gender">Visitor's Gender</label>
-     <input type="text" id="gender"name="array[]" value="" placeholder="Enter gender here"/><br>
-     <label for="date">Date Visited</label>
-     <input type="text" id="myMonth" name="array[]" value="" placeholder="Enter date here">
-     <label for="time">Time Visited</label> 
-     <input type="text" id="mytime" name="array[]" value=""  placeholder="Enter time here"><br>
-     <button type="submit" id="increment-btn" onclick="museumincrement()" >Increment Visitors Number</button><br>
-     <button type="submit" id="save-btn" onclick="museumsave()" >Save Number of visitors</button>
+    <div class="form">
+       <form action="{{url_for('insert')}}", method="POST">
+        <input type= number id="Days_deadline" name="Days_deadline">
+       <input type="text" id="description" name="description">
+       <input type="text" id="priority_level" name="priority_level">
+       <button type="submit">Save</button>
+       </form>
     </div>
-
-    <p id="save-mv">pervious record number of visitors:</p>
-    <p class="show1">Day Visited:</p>
-    <p id="month2"></p>
-    <p class="show1">Month Visited:</p>
-    <p id="month1"> </p>
-  
-
-<footer id="recordpage">
-    <button type="submit" id="record-btn" onclick="addRecord()">Record chart</button>
-     <br>
-    <p id="par" style="color:red"></p>
-    <p id = "demo1" style="color:red;"></p>
-    <p id = "demo2" style="color:red;"></p>
-    <p id = "demo3" style="color:red;"></p>
-    <p id = "demo4" style="color:red;"></p>
-    <p id = "demo5" style="color:red;"></p>
-    </b> </br>
-    <table id="table" border ="1">
-      <thead id="table-head">
-      <tr>
-          <th>fullName</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th>Date</th>
-          <th>time</th>
-      </tr>
-      </thead>
-      <tbody id="table-body">
-      </tbody>
-      </table>
-      
-
-</footer>
- </body>
+    <div class="data">
+        <table>
+           <tr>
+            <th>ID</th>
+            <th>Days_deadline</th>
+            <th>Description</th>
+            <th>Priority_level</th>
+           </tr>
+           {% for row in todo %}
+           <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td><a href="/delete/{{row.0}}">Delete</a></td>
+           </tr>
+           {% endfor %}
+        </table>
+    </div>
 </body>
 </html>
-
-    
-    
