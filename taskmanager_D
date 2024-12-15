@@ -1,0 +1,17 @@
+CREATE DATABASE taskmanager_Db;
+
+USE taskmanager_Db;
+
+CREATE TABLE Task
+
+	(
+
+		id INT PRIMARY KEY AUTO_INCREMENT,
+        Days_deadline int(50) NOT NULL,
+
+        Description VARCHAR(240) ,
+		proirity_level Varchar(240)
+    );
+
+INSERT INTO Task (Days_deadline, Description, proirity_level) VALUES('10','collect objects for exhibition', 'Red');
+INSERT INTO Task (Days_deadline, Description,proirity_level) VALUES('5', 'document objects for exhibition','Yellow');
